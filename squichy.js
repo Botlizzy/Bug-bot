@@ -131,20 +131,7 @@ function usedWithPrefix(m, command, prefix) {
     return m.text.trim().startsWith(prefix + command)
 }
 
-        if (m.message) {
-            console.log('\x1b[30m--------------------\x1b[0m');
-            console.log(chalk.bgHex("#4a69bd").bold(`▢ New Message`));
-            console.log(
-                chalk.bgHex("#ffffff").black(
-                    `   ▢ Date : ${new Date().toLocaleString()} \n` +
-                    `   ▢ Message: ${m.body || m.mtype} \n` +
-                    `   ▢ Sender: ${pushname} \n` +
-                    `   ▢ JID: ${senderNumber} \n`
-                )
-            );
-            console.log();
-        }
-  
+
 const reply = (teks) => {
     prim.sendMessage(m.chat, {
         text: teks,
